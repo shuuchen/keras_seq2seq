@@ -3,7 +3,7 @@ from keras.layers.recurrent import LSTM
 from keras.layers.embeddings import Embedding
 from keras.layers.wrappers import TimeDistributed
 from keras.models import Model
-from seq2seq.models.custom_recurrents import AttentionDecoder
+from custom_recurrents import AttentionDecoder
 from keras.utils import plot_model
 
 # model definition
