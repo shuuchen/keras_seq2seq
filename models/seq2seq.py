@@ -30,7 +30,7 @@ def seq2seq(maxLen, vocab_size):
     dialogue_output = TimeDistributed(Dense(vocab_size, activation='softmax'))(decode2)
 
     model = Model(inputs=dialogue_input, outputs=dialogue_output)
-    plot_model(model, 'seq2seq.png', show_shapes=True)
+    #plot_model(model, 'seq2seq.png', show_shapes=True)
 
     return model
 
@@ -49,7 +49,7 @@ def attention_seq2seq(maxLen, vocab_size):
     dialogue_output = AttentionDecoder(HIDDEN_SIZE, vocab_size)(encode2)
 
     model = Model(inputs=dialogue_input, outputs=dialogue_output)
-    plot_model(model, 'attention_seq2seq.png', show_shapes=True)
+    #plot_model(model, 'attention_seq2seq.png', show_shapes=True)
 
     return model
 
